@@ -1,0 +1,22 @@
+Package: cvlnt
+Title: R Interface To Covalent HQ API
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Santiago",
+           family = "Gualchi",
+           role = c("aut", "cre"),
+           email = "santiagogualchi@gmail.com")
+Description: `cvlnt` is a third-party interface for the Covalent HQ API. The
+    Covalent HQ API lets you retrieve data from the Ethereum blockchain.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    magrittr (>= 1.5),
+    httr (>= 1.4.2),
+    progress (>= 1.2.2),
+    methods (>= 4.0.3)
+Suggests: 
+    testthat (>= 2.3.2)
