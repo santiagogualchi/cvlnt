@@ -2,6 +2,8 @@
 
 export(get_address_balances)
 export(get_endpoint)
-export(get_page)
+export(get_paginated_endpoint)
+export(get_simple_endpoint)
 export(get_token_holders)
+export(get_transactions)
 importFrom(magrittr,"%>%")
