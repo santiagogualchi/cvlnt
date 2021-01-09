@@ -35,7 +35,7 @@ get_endpoint <- function(endpoint, api_key, ..., sleep = 1/10) {
 
     pb$tick()
 
-    if (has_more) {
+    if (!is.null(has_more) && has_more) {
       page_number <- page_number + 1L
       Sys.sleep(sleep)
     }
