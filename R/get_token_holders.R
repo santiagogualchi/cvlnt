@@ -3,8 +3,11 @@
 #' @param token_contract The token contract address.
 #' @param api_key The user's public API key. To generate it, you need an account
 #' at [Covalent HQ](https://www.covalenthq.com/).
-#' @param ... Additional arguments to pass to the request.
 #' @param sleep Interval in seconds between requests.
+#' @param ... Additional arguments to pass to the request.
+#'
+#' @details This endpoint does a deep-crawl of the blockchain to retrieve all
+#' kinds of transactions that references the address.
 #'
 #' @return
 #' Returns a data.frame with the balance for the specified token contract of all
@@ -18,10 +21,10 @@
 #' get_token_holders(tc, MY_API_KEY)
 #' get_token_holders(tc, MY_API_KEY, "block-height" = "11601973")
 #' }
-get_token_holders <- function(token_contract, api_key, ..., sleep = 1/10) {
+get_token_holders <- function(token_contract, api_key, sleep = 1/10, ...) {
   endpoint <- paste0("https://api.covalenthq.com/v1/1/tokens/",
                      token_contract,
                      "/token_holders/")
 
-  get_endpoint(endpoint, api_key, ..., sleep = sleep)
+  get_paginated_endpoint(endpoint, api_key, sleep = sleep, ...)
 }

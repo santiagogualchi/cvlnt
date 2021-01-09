@@ -4,7 +4,7 @@
 \alias{get_token_holders}
 \title{Get Data of a Token's Holders}
 \usage{
-get_token_holders(token_contract, api_key, ..., sleep = 1/10)
+get_token_holders(token_contract, api_key, sleep = 1/10, ...)
 }
 \arguments{
 \item{token_contract}{The token contract address.}
@@ -12,9 +12,9 @@ get_token_holders(token_contract, api_key, ..., sleep = 1/10)
 \item{api_key}{The user's public API key. To generate it, you need an account
 at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
-\item{...}{Additional arguments to pass to the request.}
-
 \item{sleep}{Interval in seconds between requests.}
+
+\item{...}{Additional arguments to pass to the request.}
 }
 \value{
 Returns a data.frame with the balance for the specified token contract of all
@@ -22,6 +22,10 @@ holders.
 }
 \description{
 Get Data of a Token's Holders
+}
+\details{
+This endpoint does a deep-crawl of the blockchain to retrieve all
+kinds of transactions that references the address.
 }
 \examples{
 \dontrun{

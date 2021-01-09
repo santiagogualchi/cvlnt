@@ -6,7 +6,6 @@
 #' @param ... Additional arguments to pass to the request.
 #' @param chain_id Chain ID of the Blockchain being queried. Supports "137" for
 #' Matic, defaults to "1" for Ethereum Mainnet.
-#' @param sleep Interval in seconds between requests.
 #'
 #' @return
 #' Returns a data.frame with all ERC20 and NFT token balances along with their
@@ -20,13 +19,12 @@
 #' get_address_balances(address, MY_API_KEY)
 #' get_address_balances(address, MY_API_KEY, "quote-currency" = "eth")
 #' }
-get_address_balances <- function(address, api_key, ..., chain_id = "1",
-                                sleep = 1/10) {
+get_address_balances <- function(address, api_key, ..., chain_id = "1") {
   endpoint <- paste0("https://api.covalenthq.com/v1/",
                      chain_id,
                      "/address/",
                      address,
                      "/balances_v2/")
 
-  get_endpoint(endpoint, api_key, ..., sleep = sleep)
+  get_simple_endpoint(endpoint, api_key, ...)
 }

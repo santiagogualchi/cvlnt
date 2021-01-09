@@ -4,7 +4,7 @@
 \alias{get_address_balances}
 \title{Get Token Address Balances}
 \usage{
-get_address_balances(address, api_key, ..., chain_id = "1", sleep = 1/10)
+get_address_balances(address, api_key, ..., chain_id = "1")
 }
 \arguments{
 \item{address}{The wallet address.}
@@ -16,8 +16,6 @@ at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
 \item{chain_id}{Chain ID of the Blockchain being queried. Supports "137" for
 Matic, defaults to "1" for Ethereum Mainnet.}
-
-\item{sleep}{Interval in seconds between requests.}
 }
 \value{
 Returns a data.frame with all ERC20 and NFT token balances along with their
