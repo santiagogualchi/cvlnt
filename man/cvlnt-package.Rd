@@ -6,7 +6,8 @@
 \alias{cvlnt-package}
 \title{cvlnt: R Interface To Covalent HQ API}
 \description{
-What the package does (one paragraph).
+cvlnt is a third-party interface for the Covalent HQ API. The
+    Covalent HQ API lets you retrieve data from the Ethereum blockchain.
 }
 \author{
 \strong{Maintainer}: Santiago Gualchi \email{santiagogualchi@gmail.com}

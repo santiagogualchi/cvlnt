@@ -6,7 +6,7 @@ Authors@R:
            family = "Gualchi",
            role = c("aut", "cre"),
            email = "santiagogualchi@gmail.com")
-Description: `cvlnt` is a third-party interface for the Covalent HQ API. The
+Description: cvlnt is a third-party interface for the Covalent HQ API. The
     Covalent HQ API lets you retrieve data from the Ethereum blockchain.
 License: GPL-3
 Encoding: UTF-8
