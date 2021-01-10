@@ -4,7 +4,7 @@
 \alias{get_block}
 \title{Get a Block Signature Datetime}
 \usage{
-get_block(block_height, api_key, ...)
+get_block(block_height, api_key, sleep = 1/10, ...)
 }
 \arguments{
 \item{block_height}{The block height. If set to \code{"latest"}, returns the
@@ -13,9 +13,9 @@ latest block available.}
 \item{api_key}{The user's public API key. To generate it, you need an account
 at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
-\item{...}{Additional arguments to pass to the request.}
-
 \item{sleep}{Interval in seconds between requests.}
+
+\item{...}{Additional arguments to pass to the request.}
 }
 \value{
 Returns a data.frame with the block height and the signature datetime.
