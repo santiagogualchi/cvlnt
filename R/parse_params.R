@@ -6,7 +6,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' x <- parse_params("page-number" = "1", "block-height" = "10000")
+#' x <- parse_params(list("page-number" = "1", "block-height" = "10000"))
 #' x == "page-number=1&block-height=10000" # TRUE.
 #' }
 parse_params <- function(params) {
