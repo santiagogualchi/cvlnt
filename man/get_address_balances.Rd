@@ -4,7 +4,7 @@
 \alias{get_address_balances}
 \title{Get Token Address Balances}
 \usage{
-get_address_balances(address, api_key, ..., chain_id = "1")
+get_address_balances(address, api_key, chain_id = "1", ...)
 }
 \arguments{
 \item{address}{The wallet address.}
@@ -12,10 +12,10 @@ get_address_balances(address, api_key, ..., chain_id = "1")
 \item{api_key}{The user's public API key. To generate it, you need an account
 at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
-\item{...}{Additional arguments to pass to the request.}
-
 \item{chain_id}{Chain ID of the Blockchain being queried. Supports "137" for
 Matic, defaults to "1" for Ethereum Mainnet.}
+
+\item{...}{Additional arguments to pass to the request.}
 }
 \value{
 Returns a data.frame with all ERC20 and NFT token balances along with their
