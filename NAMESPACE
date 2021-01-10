@@ -2,9 +2,12 @@
 
 export(get_address_balances)
 export(get_block)
+export(get_changes_in_holders)
 export(get_endpoint)
 export(get_erc20_transfers)
 export(get_latest_block)
+export(get_log_by_contract)
+export(get_nft_metadata)
 export(get_paginated_endpoint)
 export(get_simple_endpoint)
 export(get_token_holders)
