@@ -23,8 +23,8 @@ get_paginated_endpoint <- function(endpoint, api_key,  sleep = 1/10, ...) {
   page_number <- 0L
   results <- NULL
 
-  pb <- progress::progress_bar$new(format = paste0(" downloaded :current",
-                                                   " page(s) in :elapsed"),
+  pb <- progress::progress_bar$new(format = paste0("Downloaded :current ",
+                                                   "page(s) in :elapsed."),
                                    total = NA,
                                    show_after = 0)
 
