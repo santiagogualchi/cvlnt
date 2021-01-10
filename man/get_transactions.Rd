@@ -20,8 +20,8 @@ Matic, defaults to "1" for Ethereum Mainnet.}
 \item{...}{Additional arguments to pass to the request.}
 }
 \value{
-Reurns all transactions for \code{address} including their decoded log events as a
-list on the \code{log_events} column.
+Returns all transactions for \code{address} including their decoded log events as
+a list on the \code{log_events} column.
 }
 \description{
 Get transactions

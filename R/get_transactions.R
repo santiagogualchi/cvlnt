@@ -9,8 +9,8 @@
 #' @param ... Additional arguments to pass to the request.
 #'
 #' @return
-#' Reurns all transactions for `address` including their decoded log events as a
-#' list on the `log_events` column.
+#' Returns all transactions for `address` including their decoded log events as
+#' a list on the `log_events` column.
 #' @export
 #'
 #' @examples
