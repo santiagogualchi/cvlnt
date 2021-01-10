@@ -20,7 +20,9 @@
 #' get_endpoint(endpoint, MY_API_KEY, "block-height" = "11601973")
 #' }
 get_endpoint <- function(endpoint, api_key, ...) {
-  x <- httr::GET(paste0(endpoint, "?", parse_params(...)),
+  params <- list(...)
+
+  x <- httr::GET(paste0(endpoint, "?", parse_params(params)),
                  httr::authenticate(api_key, "")) %>%
     httr::content()
 

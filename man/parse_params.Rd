@@ -4,10 +4,10 @@
 \alias{parse_params}
 \title{Parses Named Parameters as a Query String}
 \usage{
-parse_params(...)
+parse_params(params)
 }
 \arguments{
-\item{...}{Named arguments}
+\item{params}{A named list of arguments.}
 }
 \value{
 Returns an atomic character with the parameters as a query string.
