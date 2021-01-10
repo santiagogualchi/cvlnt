@@ -20,13 +20,18 @@
 #' get_endpoint(endpoint, MY_API_KEY, "block-height" = "11601973")
 #' }
 get_endpoint <- function(endpoint, api_key, ...) {
-
   x <- httr::GET(paste0(endpoint, "?", parse_params(...)),
                  httr::authenticate(api_key, "")) %>%
     httr::content()
 
   if(x$error) {
-    stop("Error ", x$error_code, ": ", x$error_message, ".")
+    if (x$error_code == "504") {
+      message("\nGot Error 504: ", x$error_message, " for page number ",
+              params$`page-number`, ".\n", "Retrying.")
+      get_endpoint(endpoint, api_key, ...)
+    } else {
+      stop("Error ", x$error_code, ": ", x$error_message, ".")
+    }
   }
 
   x$data
