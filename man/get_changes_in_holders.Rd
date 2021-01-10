@@ -5,7 +5,7 @@
 \title{Get Changes In Holders Between Two Block Heights}
 \usage{
 get_changes_in_holders(
-  address,
+  token_contract,
   api_key,
   starting_block,
   ending_block,
@@ -14,6 +14,8 @@ get_changes_in_holders(
 )
 }
 \arguments{
+\item{token_contract}{The token contract address.}
+
 \item{api_key}{The user's public API key. To generate it, you need an account
 at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
@@ -25,8 +27,6 @@ block is used.}
 \item{sleep}{Interval in seconds between requests.}
 
 \item{...}{Additional arguments to pass to the request.}
-
-\item{token_contract}{The token contract address.}
 }
 \value{
 Returns a data.frame with the current/historical balances for the specified

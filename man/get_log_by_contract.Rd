@@ -4,9 +4,11 @@
 \alias{get_log_by_contract}
 \title{Get Log Events By Contract Address}
 \usage{
-get_log_by_contract(address, api_key, starting_block, ending_block, ...)
+get_log_by_contract(contract, api_key, starting_block, ending_block, ...)
 }
 \arguments{
+\item{contract}{The contract address.}
+
 \item{api_key}{The user's public API key. To generate it, you need an account
 at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
@@ -15,8 +17,6 @@ at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 \item{ending_block}{Last block to retrieve log events.}
 
 \item{...}{Additional arguments to pass to the request.}
-
-\item{contract}{The contract address.}
 }
 \value{
 Returns a data.frame with the decoded log events emitted by a particular
@@ -27,9 +27,9 @@ Get Log Events By Contract Address
 }
 \examples{
 \dontrun{
-address <- "0xc0da01a04c3f3e0be433606045bb7017a7323e38"
+contract <- "0xc0da01a04c3f3e0be433606045bb7017a7323e38"
 
-get_log_by_contract(address, MY_API_KEY, starting_block = "9601459",
+get_log_by_contract(contract, MY_API_KEY, starting_block = "9601459",
                     ending_block = "10005000")
 }
 }

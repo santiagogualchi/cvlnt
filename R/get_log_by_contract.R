@@ -14,15 +14,15 @@
 #'
 #' @examples
 #' \dontrun{
-#' address <- "0xc0da01a04c3f3e0be433606045bb7017a7323e38"
+#' contract <- "0xc0da01a04c3f3e0be433606045bb7017a7323e38"
 #'
-#' get_log_by_contract(address, MY_API_KEY, starting_block = "9601459",
+#' get_log_by_contract(contract, MY_API_KEY, starting_block = "9601459",
 #'                     ending_block = "10005000")
 #' }
-get_log_by_contract <- function(address, api_key, starting_block,
+get_log_by_contract <- function(contract, api_key, starting_block,
                                 ending_block, ...) {
   endpoint <- paste0("https://api.covalenthq.com/v1/1/events/address/",
-                     address,
+                     contract,
                      "/")
 
   get_paginated_endpoint(endpoint, api_key, "starting-block" = starting_block,

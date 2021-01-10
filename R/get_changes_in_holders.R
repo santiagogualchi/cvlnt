@@ -23,10 +23,10 @@
 #' get_changes_in_holders(contract, MY_API_KEY, starting_block = "11500000",
 #'                        ending_block = "11550000")
 #' }
-get_changes_in_holders <- function(address, api_key, starting_block,
+get_changes_in_holders <- function(token_contract, api_key, starting_block,
                                    ending_block, sleep = 1/10, ...) {
   endpoint <- paste0("https://api.covalenthq.com/v1/1/tokens/",
-                     address,
+                     token_contract,
                      "/token_holders_changes/")
 
   if (missing(ending_block)) {
