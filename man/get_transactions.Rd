@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_transactions.R
 \name{get_transactions}
 \alias{get_transactions}
-\title{Get transactions}
+\title{Get Transactions}
 \usage{
 get_transactions(address, api_key, chain_id = "1", sleep = 1/10, ...)
 }
@@ -17,14 +17,16 @@ Matic, defaults to "1" for Ethereum Mainnet.}
 
 \item{sleep}{Interval in seconds between requests.}
 
-\item{...}{Additional arguments to pass to the request.}
+\item{...}{Additional arguments to pass to the request. For more information
+on available parameters see
+\href{https://www.covalenthq.com/docs/api/}{Covalent HQ API}.}
 }
 \value{
 Returns all transactions for \code{address} including their decoded log events as
 a list on the \code{log_events} column.
 }
 \description{
-Get transactions
+Get Transactions
 }
 \examples{
 \dontrun{

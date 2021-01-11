@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_paginated_endpoint.R
 \name{get_paginated_endpoint}
 \alias{get_paginated_endpoint}
-\title{Get Paginated Data from an Endpoint}
+\title{Get Paginated Data From An Endpoint}
 \usage{
 get_paginated_endpoint(endpoint, api_key, sleep = 1/10, ...)
 }
@@ -14,13 +14,15 @@ at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
 \item{sleep}{Interval in seconds between requests.}
 
-\item{...}{Additional arguments to pass to the request.}
+\item{...}{Additional arguments to pass to the request. For more information
+on available parameters see
+\href{https://www.covalenthq.com/docs/api/}{Covalent HQ API}.}
 }
 \value{
 Returns the data for the requested endpoint as a data.frame.
 }
 \description{
-Get Paginated Data from an Endpoint
+Get Paginated Data From An Endpoint
 }
 \examples{
 \dontrun{

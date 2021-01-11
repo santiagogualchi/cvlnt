@@ -17,10 +17,13 @@ at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
 \item{sleep}{Interval in seconds between requests.}
 
-\item{...}{Additional arguments to pass to the request.}
+\item{...}{Additional arguments to pass to the request. For more information
+on available parameters see
+\href{https://www.covalenthq.com/docs/api/}{Covalent HQ API}.}
 }
 \value{
-Returns a data.frame with an address transfers for an ERC20 token.
+Returns a data.frame with the transfers of the specified ERC20 token for the
+specified address.
 }
 \description{
 Get ERC20 Token Transfers
@@ -28,9 +31,10 @@ Get ERC20 Token Transfers
 \examples{
 \dontrun{
 address <- "0x669184d1fe949249857439232ee67d7adb25d0ae"
-tc <- "0x0954906da0Bf32d5479e25f46056d22f08464cab"
+token_contract <- "0x0954906da0Bf32d5479e25f46056d22f08464cab"
 
-get_erc20_transfers(address, tc, MY_API_KEY)
-get_erc20_transfers(address, tc, MY_API_KEY, "quote-currency" = "eth")
+get_erc20_transfers(address, token_contract, MY_API_KEY)
+get_erc20_transfers(address, token_contract, MY_API_KEY,
+                    "quote-currency" = "eth")
 }
 }

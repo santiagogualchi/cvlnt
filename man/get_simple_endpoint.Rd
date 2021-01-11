@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_simple_endpoint.R
 \name{get_simple_endpoint}
 \alias{get_simple_endpoint}
-\title{Get Unpaginated Data from an Endpoint}
+\title{Get Unpaginated Data From An Endpoint}
 \usage{
 get_simple_endpoint(endpoint, api_key, ...)
 }
@@ -12,13 +12,15 @@ get_simple_endpoint(endpoint, api_key, ...)
 \item{api_key}{The user's public API key. To generate it, you need an account
 at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
-\item{...}{Additional arguments to pass to the request.}
+\item{...}{Additional arguments to pass to the request. For more information
+on available parameters see
+\href{https://www.covalenthq.com/docs/api/}{Covalent HQ API}.}
 }
 \value{
 Returns the data for the requested endpoint as a data.frame.
 }
 \description{
-Get Unpaginated Data from an Endpoint
+Get Unpaginated Data From An Endpoint
 }
 \examples{
 \dontrun{

@@ -1,7 +1,7 @@
 #' Get Latest Block
 #'
-#' @param api_key #' @param api_key The user's public API key. To generate it,
-#' you need an account at [Covalent HQ](https://www.covalenthq.com/).
+#' @param api_key The user's public API key. To generate it, you need an account
+#' at [Covalent HQ](https://www.covalenthq.com/).
 #'
 #' @return
 #' A character with the latest block height.

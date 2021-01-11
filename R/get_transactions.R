@@ -1,4 +1,4 @@
-#' Get transactions
+#' Get Transactions
 #'
 #' @param address The wallet address.
 #' @param api_key The user's public API key. To generate it, you need an account
@@ -6,7 +6,9 @@
 #' @param chain_id Chain ID of the Blockchain being queried. Supports "137" for
 #' Matic, defaults to "1" for Ethereum Mainnet.
 #' @param sleep Interval in seconds between requests.
-#' @param ... Additional arguments to pass to the request.
+#' @param ... Additional arguments to pass to the request. For more information
+#' on available parameters see
+#' [Covalent HQ API](https://www.covalenthq.com/docs/api/).
 #'
 #' @return
 #' Returns all transactions for `address` including their decoded log events as
@@ -22,11 +24,7 @@
 #' }
 get_transactions <- function(address, api_key, chain_id = "1", sleep = 1/10,
                              ...) {
-  endpoint <- paste0("https://api.covalenthq.com/v1/",
-                     chain_id,
-                     "/address/",
-                     address,
-                     "/transactions_v2/")
+  endpoint <- paste0("v1/", chain_id, "/address/", address, "/transactions_v2/")
 
-  get_paginated_endpoint(endpoint, api_key, sleep = sleep, ...)
+  get_paginated_endpoint(endpoint, api_key, sleep, ...)
 }

@@ -2,9 +2,15 @@
 % Please edit documentation in R/get_token_holders.R
 \name{get_token_holders}
 \alias{get_token_holders}
-\title{Get Data of a Token's Holders}
+\title{Get Token Holders As Of A Block Height}
 \usage{
-get_token_holders(token_contract, api_key, sleep = 1/10, ...)
+get_token_holders(
+  token_contract,
+  api_key,
+  block_height = "latest",
+  sleep = 1/10,
+  ...
+)
 }
 \arguments{
 \item{token_contract}{The token contract address.}
@@ -12,16 +18,21 @@ get_token_holders(token_contract, api_key, sleep = 1/10, ...)
 \item{api_key}{The user's public API key. To generate it, you need an account
 at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
+\item{block_height}{The block height. If set to \code{"latest"}, returns the
+latest block available.}
+
 \item{sleep}{Interval in seconds between requests.}
 
-\item{...}{Additional arguments to pass to the request.}
+\item{...}{Additional arguments to pass to the request. For more information
+on available parameters see
+\href{https://www.covalenthq.com/docs/api/}{Covalent HQ API}.}
 }
 \value{
 Returns a data.frame with the balance for the specified token contract of all
 holders.
 }
 \description{
-Get Data of a Token's Holders
+Get Token Holders As Of A Block Height
 }
 \details{
 This endpoint does a deep-crawl of the blockchain to retrieve all
@@ -29,9 +40,9 @@ kinds of transactions that references the address.
 }
 \examples{
 \dontrun{
-tc <- "0x0954906da0Bf32d5479e25f46056d22f08464cab"
+token_contract <- "0x0954906da0Bf32d5479e25f46056d22f08464cab"
 
-get_token_holders(tc, MY_API_KEY)
-get_token_holders(tc, MY_API_KEY, "block-height" = "11601973")
+get_token_holders(token_contract, MY_API_KEY)
+get_token_holders(token_contract, MY_API_KEY, block_height = "11601973")
 }
 }

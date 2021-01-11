@@ -4,17 +4,21 @@
 \alias{get_nft_metadata}
 \title{Get External NFT Metadata}
 \usage{
-get_nft_metadata(address, token_id, api_key, ...)
+get_nft_metadata(contract, token_id, api_key, sleep = 1/10, ...)
 }
 \arguments{
-\item{address}{An ERC751 or ERC1155 NFT contract address.}
+\item{contract}{An ERC751 or ERC1155 NFT contract address.}
 
 \item{token_id}{The NFT token ID.}
 
 \item{api_key}{The user's public API key. To generate it, you need an account
 at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
-\item{...}{Additional arguments to pass to the request.}
+\item{sleep}{Interval in seconds between requests.}
+
+\item{...}{Additional arguments to pass to the request. For more information
+on available parameters see
+\href{https://www.covalenthq.com/docs/api/}{Covalent HQ API}.}
 }
 \value{
 Returns a data.frame with an NFT external metadata.
@@ -24,9 +28,9 @@ Get External NFT Metadata
 }
 \examples{
 \dontrun{
-address <- "0xe4605d46fd0b3f8329d936a8b258d69276cba264"
+contract <- "0xe4605d46fd0b3f8329d936a8b258d69276cba264"
 token_id <- "123"
 
-get_nft_metadata(address, token_id, MY_API_KEY)
+get_nft_metadata(contract, token_id, MY_API_KEY)
 }
 }

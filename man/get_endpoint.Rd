@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_endpoint.R
 \name{get_endpoint}
 \alias{get_endpoint}
-\title{Performs a Request to an Endpoint}
+\title{Performs A Request To A Covalent HQ Endpoint}
 \usage{
 get_endpoint(endpoint, api_key, ...)
 }
@@ -12,13 +12,15 @@ get_endpoint(endpoint, api_key, ...)
 \item{api_key}{The user's public API key. To generate it, you need an account
 at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
-\item{...}{Additional arguments to pass to the request.}
+\item{...}{Additional arguments to pass to the request. For more information
+on available parameters see
+\href{https://www.covalenthq.com/docs/api/}{Covalent HQ API}.}
 }
 \value{
 Returns the endpoint data for the requested page.
 }
 \description{
-Performs a Request to an Endpoint
+Performs A Request To A Covalent HQ Endpoint
 }
 \examples{
 \dontrun{

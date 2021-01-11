@@ -1,10 +1,12 @@
-#' Get Paginated Data from an Endpoint
+#' Get Paginated Data From An Endpoint
 #'
 #' @param endpoint The endpoint's URI.
 #' @param api_key The user's public API key. To generate it, you need an account
 #' at [Covalent HQ](https://www.covalenthq.com/).
 #' @param sleep Interval in seconds between requests.
-#' @param ... Additional arguments to pass to the request.
+#' @param ... Additional arguments to pass to the request. For more information
+#' on available parameters see
+#' [Covalent HQ API](https://www.covalenthq.com/docs/api/).
 #'
 #' @return
 #' Returns the data for the requested endpoint as a data.frame.

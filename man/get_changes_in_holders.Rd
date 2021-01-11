@@ -2,13 +2,13 @@
 % Please edit documentation in R/get_changes_in_holders.R
 \name{get_changes_in_holders}
 \alias{get_changes_in_holders}
-\title{Get Changes In Holders Between Two Block Heights}
+\title{Get Changes In Token Holders Between Two Block Heights}
 \usage{
 get_changes_in_holders(
   token_contract,
   api_key,
   starting_block,
-  ending_block,
+  ending_block = "latest",
   sleep = 1/10,
   ...
 )
@@ -19,21 +19,22 @@ get_changes_in_holders(
 \item{api_key}{The user's public API key. To generate it, you need an account
 at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
-\item{starting_block}{First block to retrieve log events.}
+\item{starting_block}{Starting block to define a block range.}
 
-\item{ending_block}{Last block to retrieve log events. If omitted, the latest
-block is used.}
+\item{ending_block}{Ending block to define a block range.}
 
 \item{sleep}{Interval in seconds between requests.}
 
-\item{...}{Additional arguments to pass to the request.}
+\item{...}{Additional arguments to pass to the request. For more information
+on available parameters see
+\href{https://www.covalenthq.com/docs/api/}{Covalent HQ API}.}
 }
 \value{
 Returns a data.frame with the current/historical balances for the specified
 token contract of all holders.
 }
 \description{
-Get Changes In Holders Between Two Block Heights
+Get Changes In Token Holders Between Two Block Heights
 }
 \examples{
 \dontrun{

@@ -7,8 +7,8 @@
 get_latest_block(api_key)
 }
 \arguments{
-\item{api_key}{#' @param api_key The user's public API key. To generate it,
-you need an account at \href{https://www.covalenthq.com/}{Covalent HQ}.}
+\item{api_key}{The user's public API key. To generate it, you need an account
+at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 }
 \value{
 A character with the latest block height.

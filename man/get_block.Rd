@@ -2,9 +2,9 @@
 % Please edit documentation in R/get_block.R
 \name{get_block}
 \alias{get_block}
-\title{Get a Block Signature Datetime}
+\title{Get A Block Signature Datetime}
 \usage{
-get_block(block_height, api_key, sleep = 1/10, ...)
+get_block(block_height, api_key, ...)
 }
 \arguments{
 \item{block_height}{The block height. If set to \code{"latest"}, returns the
@@ -13,15 +13,15 @@ latest block available.}
 \item{api_key}{The user's public API key. To generate it, you need an account
 at \href{https://www.covalenthq.com/}{Covalent HQ}.}
 
-\item{sleep}{Interval in seconds between requests.}
-
-\item{...}{Additional arguments to pass to the request.}
+\item{...}{Additional arguments to pass to the request. For more information
+on available parameters see
+\href{https://www.covalenthq.com/docs/api/}{Covalent HQ API}.}
 }
 \value{
 Returns a data.frame with the block height and the signature datetime.
 }
 \description{
-Get a Block Signature Datetime
+Get A Block Signature Datetime
 }
 \examples{
 \dontrun{

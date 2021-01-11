@@ -2,7 +2,7 @@
 % Please edit documentation in R/parse_params.R
 \name{parse_params}
 \alias{parse_params}
-\title{Parses Named Parameters as a Query String}
+\title{Parses Named Parameters As A Query String}
 \usage{
 parse_params(params)
 }
@@ -13,7 +13,7 @@ parse_params(params)
 Returns an atomic character with the parameters as a query string.
 }
 \description{
-Parses Named Parameters as a Query String
+Parses Named Parameters As A Query String
 }
 \examples{
 \dontrun{
