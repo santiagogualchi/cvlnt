@@ -25,8 +25,6 @@ Get A Block Signature Datetime
 }
 \examples{
 \dontrun{
-tc <- "0x0954906da0Bf32d5479e25f46056d22f08464cab"
-
 get_block("11601973", MY_API_KEY)
 get_block("latest", MY_API_KEY)
 }
