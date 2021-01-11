@@ -38,7 +38,7 @@ get_paginated_endpoint <- function(endpoint, api_key,  sleep = 1/10, ...) {
 
     pb$tick()
 
-    if (!is.null(has_more) && has_more) {
+    if (has_more) {
       page_number <- page_number + 1L
       Sys.sleep(sleep)
     }
