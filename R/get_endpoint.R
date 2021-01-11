@@ -14,7 +14,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' endpoint <- paste0("https://api.covalenthq.com/v1/1/address/",
+#' endpoint <- paste0("v1/1/address/",
 #'                    "0xe6a7a1d47ff21b6321162aea7c6cb457d5476bca",
 #'                    "/balances_v2/")
 #'
@@ -31,7 +31,7 @@ get_endpoint <- function(endpoint, api_key, ...) {
 
   if(x$error) {
     if (x$error_code == "504") {
-      message("\nGot Error 504: ", x$error_message, " for page number ",
+      message('\nGot Error 504: "', x$error_message, '" for page number ',
               args$`page-number`, ".\n", "Retrying.")
       get_endpoint(endpoint, api_key, ...)
     } else {
