@@ -4,6 +4,8 @@
 #'
 #' @return Returns an atomic character with the arguments as a query string.
 #'
+#' @noRd
+#'
 #' @examples
 #' \dontrun{
 #' x <- parse_args(list("page-number" = "1", "block-height" = "10000"))

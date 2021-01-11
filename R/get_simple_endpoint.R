@@ -9,7 +9,8 @@
 #'
 #' @return
 #' Returns the data for the requested endpoint as a data.frame.
-#' @export
+#'
+#' @noRd
 #'
 #' @examples
 #' \dontrun{

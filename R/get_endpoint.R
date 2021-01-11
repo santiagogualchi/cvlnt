@@ -10,7 +10,7 @@
 #' @return
 #' Returns the endpoint data for the requested page.
 #'
-#' @export
+#' @noRd
 #'
 #' @examples
 #' \dontrun{
